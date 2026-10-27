@@ -1,0 +1,41 @@
+[
+    {
+        "id": "typescript",
+        "title": "TypeScript",
+        "bg_color": "#0a66c2",
+        "icon": "typescript"
+    },
+    {
+        "id": "react",
+        "title": "React / Next.js",
+        "bg_color": "#1c1c1c",
+        "icon": "react"
+    },
+    {
+        "id": "postgresql",
+        "title": "PostgreSQL",
+        "bg_color": "#ffc4b4",
+        "icon": "postgresql",
+        "text_color": "#000"
+    },
+    {
+        "id": "tailwind",
+        "title": "Tailwind CSS",
+        "bg_color": "#00ac9d",
+        "icon": "tailwind"
+    },
+    {
+        "id": "nodejs",
+        "title": "Node.js",
+        "bg_color": "#fdc003",
+        "icon": "nodejs",
+        "text_color": "#000"
+    },
+    {
+        "id": "system-design",
+        "title": "System Design",
+        "bg_color": "#5700ef",
+        "icon": "system-design",
+        "text_color": "#fff"
+    }
+]

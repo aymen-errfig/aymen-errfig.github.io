@@ -1,0 +1,46 @@
+[
+    {
+        "id": "project-1",
+        "title": "Project 1",
+        "description": "This is a sample project.",
+        "tags": [
+            "TypeScript",
+            "React"
+        ],
+        "imageUrl": "/images/project1.jpg",
+        "isNew": true
+    },
+    {
+        "id": "project-2",
+        "title": "Project 2",
+        "description": "This is another sample project.",
+        "tags": [
+            "JavaScript",
+            "Vue"
+        ],
+        "imageUrl": "/images/project2.jpg",
+        "isNew": false
+    },
+    {
+        "id": "project-3",
+        "title": "Project 3",
+        "description": "This is yet another sample project.",
+        "tags": [
+            "Python",
+            "Django"
+        ],
+        "imageUrl": "/images/project3.jpg",
+        "isNew": true
+    },
+    {
+        "id": "project-4",
+        "title": "Project 4",
+        "description": "This is a fourth sample project.",
+        "tags": [
+            "Java",
+            "Spring"
+        ],
+        "imageUrl": "/images/project4.jpg",
+        "isNew": false
+    }
+]
