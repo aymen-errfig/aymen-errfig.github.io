@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon/components";
+
+const skills = [
+    { title: "TypeScript", bg_color: "#0a66c2", icon: "typescript" },
+    { title: "React / Next.js", bg_color: "#1c1c1c", icon: "react" },
+    {
+        title: "PostgreSQL",
+        bg_color: "#ffc4b4",
+        icon: "postgresql",
+        text_color: "#000",
+    },
+    { title: "Tailwind CSS", bg_color: "#00ac9d", icon: "tailwind" },
+    {
+        title: "Node.js",
+        bg_color: "#fdc003",
+        icon: "nodejs",
+        text_color: "#000",
+    },
+    {
+        title: "System Design",
+        bg_color: "#5700ef",
+        icon: "system-design",
+        text_color: "#fff",
+    },
+];
+---
+
+<section
+    id="skills"
+    class="bg-white h-fit p-12 flex flex-col items-center gap-12"
+>
+    <div class="flex flex-col gap-1 justify-center items-center">
+        <h4 class="label uppercase">Selected Skills</h4>
+        <h2 class="uppercase text-2xl text-text">SKILLS and technologies</h2>
+    </div>
+    <div class="flex flex-wrap gap-4 w-[80%]">
+        {
+            skills.map((skill) => (
+                <div
+                    class="skill"
+                    style={{
+                        background: skill.bg_color,
+                        color: skill.text_color || "#fff",
+                    }}
+                >
+                    <Icon name={skill.icon} size={16} />
+                    {skill.title}
+                </div>
+            ))
+        }
+    </div>
+</section>

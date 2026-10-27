@@ -1,0 +1,59 @@
+---
+import Project from "./project.astro";
+const PROJECTS = [
+    {
+        title: "Project 1",
+        description: "This is a sample project.",
+        tags: ["TypeScript", "React"],
+        imageUrl: "/images/project1.jpg",
+        isNew: true,
+    },
+    {
+        title: "Project 2",
+        description: "This is another sample project.",
+        tags: ["JavaScript", "Vue"],
+        imageUrl: "/images/project2.jpg",
+        isNew: false,
+    },
+    {
+        title: "Project 3",
+        description: "This is yet another sample project.",
+        tags: ["Python", "Django"],
+        imageUrl: "/images/project3.jpg",
+        isNew: true,
+    },
+    {
+        title: "Project 4",
+        description: "This is a fourth sample project.",
+        tags: ["Java", "Spring"],
+        imageUrl: "/images/project4.jpg",
+        isNew: false,
+    },
+];
+---
+
+<section id="projects" class="bg-secondary py-12 flex justify-center">
+    <div class="flex flex-col gap-8 w-[80%]">
+        <div class="flex flex-col gap-1 justify-center items-start">
+            <h4 class="label uppercase">Selected Skills</h4>
+            <h2 class="uppercase text-2xl text-text">
+                SKILLS and technologies
+            </h2>
+        </div>
+        <div
+            class="flex gap-4 max-h-full overflow-x-scroll scrollbar-thumb-transparent scrollbar-track-transparent scrollbar-thin pb-4"
+        >
+            {
+                PROJECTS.map((project) => (
+                    <Project
+                        title={project.title}
+                        description={project.description}
+                        tags={project.tags}
+                        imageUrl={project.imageUrl}
+                        isNew={project.isNew}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</section>

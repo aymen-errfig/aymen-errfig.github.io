@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import Profile from "../assets/img/profile.png";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="p-8 flex items-center justify-center" id="profile">
+    <div class="w-[80%] items-center flex">
+        <div class="w-auto grow flex justify-center">
+            <div class="w-[70%]">
+                <Image
+                    src={Profile}
+                    alt={"Aymen Errfig profile"}
+                    fetchpriority={"high"}
+                    loading={"eager"}
+                />
+            </div>
+        </div>
+        <div class="w-[60%] flex flex-col gap-4 mt-4">
+            <h1 class="text-4xl">
+                Aymen Errfig <span>Frontend Dev</span> && <span
+                    >UI / UX Designer</span
+                >
+            </h1>
+            <p class="text-sm">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknow.
+            </p>
+            <div class="flex gap-2 mt-6">
+                <button
+                    aria-label="resume download button"
+                    class="bg-white text-gray-900 text-xs uppercase font-bold px-4"
+                >
+                    <Icon name="download" size={16} />
+                    Download resume</button
+                >
+                <button
+                    aria-label="linkedin link"
+                    class="bg-blue-600 text-white rounded-full w-10 h-10 p-0 ml-5"
+                    ><Icon size={16} name="linkedin" /></button
+                >
+                <button
+                    aria-label="github link"
+                    class="bg-black text-white rounded-full w-10 h-10 p-0"
+                    ><Icon size={16} name="github" /></button
+                >
+            </div>
+        </div>
+    </div>
+</section>

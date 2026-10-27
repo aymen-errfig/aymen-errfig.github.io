@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+    --color-primary: #5700ef;
+    --color-accent: #FDC003;
+    --color-secondary: #DDCAFF;
+    --color-background: #fff5e2;
+    --color-surface: #ffffff;
+    --color-body: #1e1e1e;
+    --color-text: #393833;
+    --color-label: #BA3200;
+    --radius-base: 0px;
+}
+
+@layer base {
+
+    * {
+        font-family: var(--font-display);
+    }
+
+    p {
+        font-family: var(--font-display);
+    }
+
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--color-background);
+        scroll-behavior: smooth;
+    }
+
+    h1,
+    h2 {
+        font-family: var(--font-heading);
+    }
+
+    h3,
+    h4 {
+        font-family: var(--font-label);
+    }
+
+    .label {
+        font-family: var(--font-label);
+        font-size: var(--text-base);
+        color: var(--color-label);
+    }
+
+    li {
+        position: relative;
+        text-align: center;
+        padding: 2px;
+    }
+
+    span {
+        color: var(--color-primary);
+        font-family: var(--font-heading);
+    }
+
+    li::after {
+        content: "";
+        position: absolute;
+        margin-top: 2px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0%;
+        align-self: center;
+        height: 2px;
+        background: var(--color-accent);
+        animation: 1s linear;
+        transition: 1s;
+    }
+
+    .spacegrotesk {
+        font-family: var(--font-label-small);
+    }
+
+    li:hover::after {
+        width: 100%;
+    }
+
+    button,
+    .skill {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background: var(--color-primary);
+        padding: 8px 16px;
+        color: white;
+        box-shadow: 4px 4px 0px 0px #000000;
+        transition: 0.4s ease-out, background-color 0.4s ease-out;
+        border: 1px solid #000000;
+        font-size: var(--text-xs);
+    }
+
+    .card {
+        box-shadow: 4px 4px 0px 0px #000000;
+        transition: 0.4s ease-out, background-color 0.4s ease-out;
+        border: 1px solid #000000;
+    }
+
+    button:hover,
+    .skill:hover {
+        cursor: pointer;
+        animation-duration: 500ms;
+        box-shadow: 5px 5px 0px 0px #000000;
+    }
+
+    button:active,
+    .skill:active {
+        box-shadow: 0px 0px 0px 0px #000000;
+    }
+
+    .skill {
+        font-family: var(--font-label-small);
+        font-size: var(--text-sm);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    section {
+        height: 100vh;
+        width: 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        border: 1px solid #000000;
+        z-index: 0;
+    }
+}
