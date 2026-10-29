@@ -37,5 +37,53 @@
         "bg_color": "#5700ef",
         "icon": "system-design",
         "text_color": "#fff"
+    },
+    {
+        "id": "python",
+        "title": "Python",
+        "bg_color": "#3776ab",
+        "icon": "python"
+    },
+    {
+        "id": "cpp",
+        "title": "C / C++",
+        "bg_color": "#00599c",
+        "icon": "cpp"
+    },
+    {
+        "id": "flutter",
+        "title": "Flutter / Dart",
+        "bg_color": "#02569b",
+        "icon": "flutter"
+    },
+    {
+        "id": "astro",
+        "title": "Astro",
+        "bg_color": "#bc52ee",
+        "icon": "astro"
+    },
+    {
+        "id": "laravel",
+        "title": "Laravel",
+        "bg_color": "#ff2d20",
+        "icon": "laravel"
+    },
+    {
+        "id": "nestjs",
+        "title": "NestJS",
+        "bg_color": "#e0234e",
+        "icon": "nestjs"
+    },
+    {
+        "id": "trpc",
+        "title": "tRPC",
+        "bg_color": "#2596be",
+        "icon": "trpc"
+    },
+    {
+        "id": "html-css",
+        "title": "HTML / CSS",
+        "bg_color": "#e34f26",
+        "icon": "html-css"
     }
 ]

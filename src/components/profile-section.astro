@@ -23,9 +23,12 @@ import { Icon } from "astro-icon/components";
                 >
             </h1>
             <p class="text-sm">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknow.
+                I’m a software engineer focused on building web and mobile
+                experiences that stay fast and reliable, even on shaky
+                connections. I pair intuitive UX with clean, type-safe code,
+                specializing in offline-first systems and real-time features. As
+                a lifelong learner, I enjoy helping teams write cleaner code,
+                untangle tough bugs, and adopt smarter AI workflows.
             </p>
             <div class="flex gap-2 mt-6">
                 <button
@@ -35,16 +38,30 @@ import { Icon } from "astro-icon/components";
                     <Icon name="download" size={16} />
                     Download resume</button
                 >
-                <button
+                <a
                     aria-label="linkedin link"
-                    class="bg-blue-600 text-white rounded-full w-10 h-10 p-0 ml-5"
-                    ><Icon size={16} name="linkedin" /></button
+                    href="https://www.linkedin.com/in/errfig-aymen-dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                <button
+                    <button
+                        aria-label="linkedin link"
+                        class="bg-blue-600 text-white rounded-full w-10 h-10 p-0 ml-5"
+                        ><Icon size={16} name="linkedin" /></button
+                    >
+                </a>
+                <a
                     aria-label="github link"
-                    class="bg-black text-white rounded-full w-10 h-10 p-0"
-                    ><Icon size={16} name="github" /></button
+                    href="https://github.com/aymen-errfig"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
+                    <button
+                        aria-label="github link"
+                        class="bg-black text-white rounded-full w-10 h-10 p-0"
+                        ><Icon size={16} name="github" /></button
+                    >
+                </a>
             </div>
         </div>
     </div>
