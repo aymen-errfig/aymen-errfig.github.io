@@ -4,10 +4,12 @@ import Profile from "../assets/img/profile.png";
 import { Icon } from "astro-icon/components";
 ---
 
-<section class="p-8 flex items-center justify-center" id="profile">
-    <div class="w-[80%] items-center flex">
+<section class="p-8 flex items-center justify-center min-h-screen" id="profile">
+    <div
+        class="w-[80%] max-md:w-full items-center flex max-md:flex-col max-md:mt-20 max-md:pb-5"
+    >
         <div class="w-auto grow flex justify-center">
-            <div class="w-[70%]">
+            <div class="w-[70%] max-md:w-[60%]">
                 <Image
                     src={Profile}
                     alt={"Aymen Errfig profile"}
@@ -16,13 +18,13 @@ import { Icon } from "astro-icon/components";
                 />
             </div>
         </div>
-        <div class="w-[60%] flex flex-col gap-4 mt-4">
-            <h1 class="text-4xl">
+        <div class="w-[60%] max-md:w-[80%] flex flex-col gap-4 mt-4">
+            <h1 class="text-3xl max-md:text-center max-md:text-2xl">
                 Aymen Errfig <span>Frontend Dev</span> && <span
                     >UI / UX Designer</span
                 >
             </h1>
-            <p class="text-sm">
+            <p class="text-sm max-md:text-xs leading-relaxed text-justify">
                 I’m a software engineer focused on building web and mobile
                 experiences that stay fast and reliable, even on shaky
                 connections. I pair intuitive UX with clean, type-safe code,
@@ -39,6 +41,7 @@ import { Icon } from "astro-icon/components";
                     Download resume</button
                 >
                 <a
+                    class="max-md:ml-auto"
                     aria-label="linkedin link"
                     href="https://www.linkedin.com/in/errfig-aymen-dev/"
                     target="_blank"

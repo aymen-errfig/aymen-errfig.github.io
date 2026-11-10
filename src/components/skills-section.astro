@@ -13,11 +13,11 @@ const skills_collection = await getCollection("skills");
         <h4 class="label uppercase">Selected Skills</h4>
         <h2 class="uppercase text-2xl text-text">SKILLS and technologies</h2>
     </div>
-    <div class="flex flex-wrap gap-4 w-[80%]">
+    <div class="flex flex-wrap gap-4 w-[90%]">
         {
             skills_collection.map((skill) => (
                 <div
-                    class="skill"
+                    class="skill max-sm:w-full"
                     style={{
                         background: skill.data.bg_color,
                         color: skill.data.text_color || "#fff",
