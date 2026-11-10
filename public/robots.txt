@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aymen-errfig.me/index-index.xml

@@ -14,8 +14,24 @@ import { SEO } from "astro-seo";
 	<link rel="icon" href="/favicon.ico" />
 	<meta name="generator" content={Astro.generator} />
 	<SEO
-		title="Aymen Errfig | Software Developer"
-		description="aymen errfig is a software engineer"
+		title="Aymen Errfig | Frontend Engineer"
+		description="Aymen Errfig is a Frontend Engineer and UI/UX Designer specializing in building web and mobile experiences that are fast, reliable, and intuitive. Explore his portfolio to see his work and skills."
+		openGraph={{
+			basic: {
+				title: "Aymen Errfig | Frontend Engineer",
+				url: "https://aymen-errfig.me",
+				image: "https://aymen-errfig.me/og-image.png",
+				type: "website",
+			},
+			optional: {
+				description:
+					"Aymen Errfig is a Frontend Engineer and UI/UX Designer specializing in building web and mobile experiences that are fast, reliable, and intuitive. Explore his portfolio to see his work and skills.",
+				siteName: "Aymen Errfig Portfolio",
+				locale: "en_US",
+				determiner: "the",
+				localeAlternate: ["en_US", "fr_FR"],
+			},
+		}}
 	/>
 	<title>Astro Basics</title>
 	<Font cssVariable="--font-display" />

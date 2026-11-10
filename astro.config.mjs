@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 import icon from "astro-icon";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
   site: "http://aymen-errfig.me",
@@ -60,5 +62,5 @@ export default defineConfig({
 
   integrations: [icon({
     iconDir: "./src/assets/icons"
-  })]
+  }), sitemap()]
 });
