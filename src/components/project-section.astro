@@ -5,18 +5,19 @@ import { getCollection } from "astro:content";
 const projects = await getCollection("projects");
 ---
 
-<section id="projects" class="bg-secondary py-12 flex justify-center">
+<section id="projects" class="bg-secondary py-12 h-auto flex justify-center">
     <div class="flex flex-col gap-8 w-[80%]">
         <div class="flex flex-col gap-1 justify-center items-start">
             <h4 class="label uppercase">Selected Projects</h4>
             <h2 class="uppercase text-2xl text-text">Projects and Work</h2>
         </div>
         <div
-            class="flex gap-4 max-h-full overflow-x-scroll scrollbar-thumb-transparent scrollbar-track-transparent scrollbar-thin pb-4"
+            class="flex gap-4 overflow-x-scroll scrollbar-thumb-transparent scrollbar-track-transparent scrollbar-thin pb-4"
         >
             {
                 projects.map((project) => (
                     <Project
+                        key={project.data.title}
                         title={project.data.title}
                         description={project.data.description}
                         tags={project.data.tags}

@@ -1,13 +1,16 @@
 [
     {
         "id": "project-1",
-        "title": "Project 1",
-        "description": "This is a sample project.",
+        "title": "Transcendence & Kick off",
+        "description": "This is a project when you can play, chat, and connect with others.",
         "tags": [
             "TypeScript",
-            "React"
+            "React/Next.js",
+            "Tailwind CSS",
+            "NestJS",
+            "PostgreSQL"
         ],
-        "imageUrl": "/images/project1.jpg",
+        "imageUrl": "/src/assets/img/ft_transcendence/cover.png",
         "isNew": true
     },
     {
@@ -18,7 +21,7 @@
             "JavaScript",
             "Vue"
         ],
-        "imageUrl": "/images/project2.jpg",
+        "imageUrl": "/src/assets/img/ft_transcendence/cover.png",
         "isNew": false
     },
     {
@@ -29,7 +32,7 @@
             "Python",
             "Django"
         ],
-        "imageUrl": "/images/project3.jpg",
+        "imageUrl": "/src/assets/img/ft_transcendence/cover.png",
         "isNew": true
     },
     {
@@ -40,7 +43,7 @@
             "Java",
             "Spring"
         ],
-        "imageUrl": "/images/project4.jpg",
+        "imageUrl": "/src/assets/img/ft_transcendence/cover.png",
         "isNew": false
     }
 ]
