@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-const { title, description, tags, imageUrl, isNew } = Astro.props as {
+const { id, title, description, tags, imageUrl, isNew } = Astro.props as {
+	id: string;
 	title: string;
 	description: string;
 	tags: string[];
@@ -16,43 +17,42 @@ if (!images[imageUrl]) {
 const image = images[imageUrl]();
 ---
 
-<div
-	class="flex flex-col min-w-90 card bg-white relative h-full transition cursor-pointer duration-1000 hover:shadow-none"
->
-	<div class="absolute gap-2 flex top-2 right-2">
-		<div class="flex bg-accent border">
-			{
-				isNew && (
-					<span class="p-2 text-xs border spacegrotesk uppercase text-text">
-						NEW
-					</span>
-				)
-			}
+<a href={`/projects/${id}`} aria-label={`View details for ${title}`}
+	><div
+		class="flex flex-col min-w-90 card bg-white relative h-full transition cursor-pointer duration-1000 hover:shadow-none"
+	>
+		<div class="absolute gap-2 flex top-2 right-2">
+			<div class="flex bg-accent border">
+				{
+					isNew && (
+						<span class="p-2 text-xs border spacegrotesk uppercase text-text">
+							NEW
+						</span>
+					)
+				}
+			</div>
 		</div>
-		<a
-			href={imageUrl}
-			target="_blank"
-			class="p-2 text-xs border spacegrotesk uppercase text-text bg-white"
-		>
-			REPO
-		</a>
-	</div>
-	<div class="h-60 bg-gray-300">
-		<Image src={image} alt={title} />
-	</div>
-	<div class="flex grow flex-col gap-4 p-4 border-t-2 bg-white border">
-		<h3 class="text-lg font-bold uppercase">{title}</h3>
-		<p class="text-xs text-gray-800">
-			{description}
-		</p>
-		<div class="flex gap-1.5 mt-auto flex-wrap">
-			{
-				tags.map((tag) => (
-					<span class="bg-gray-300 text-text p-2 text-2xs border spacegrotesk uppercase">
-						{tag}
-					</span>
-				))
-			}
+		<div class="h-50 bg-gray-300 relative overflow-hidden">
+			<Image
+				class={"object-cover w-full h-full"}
+				src={image}
+				alt={title}
+			/>
+		</div>
+		<div class="flex grow flex-col gap-4 p-4 border-t-2 bg-white border">
+			<h3 class="text-lg font-bold uppercase">{title}</h3>
+			<p class="text-xs text-gray-800">
+				{description}
+			</p>
+			<div class="flex gap-1.5 mt-auto flex-wrap">
+				{
+					tags.map((tag) => (
+						<span class="bg-gray-300 text-text p-2 text-2xs border spacegrotesk uppercase">
+							{tag}
+						</span>
+					))
+				}
+			</div>
 		</div>
 	</div>
-</div>
+</a>

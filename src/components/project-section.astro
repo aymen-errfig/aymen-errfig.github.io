@@ -15,9 +15,10 @@ const projects = await getCollection("projects");
             class="flex gap-4 overflow-x-scroll scrollbar-thumb-transparent scrollbar-track-transparent scrollbar-thin pb-4"
         >
             {
-                projects.map((project) => (
+                projects.map((project) => (  
                     <Project
                         key={project.data.title}
+                        id={project.data.id}
                         title={project.data.title}
                         description={project.data.description}
                         tags={project.data.tags}
