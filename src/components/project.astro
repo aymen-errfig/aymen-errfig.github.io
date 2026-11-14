@@ -37,11 +37,12 @@ const image = images[imageUrl]();
 				class={"object-cover w-full h-full"}
 				src={image}
 				alt={title}
+				loading="lazy"
 			/>
 		</div>
 		<div class="flex grow flex-col gap-4 p-4 border-t-2 bg-white border">
 			<h3 class="text-lg font-bold uppercase">{title}</h3>
-			<p class="text-xs text-gray-800">
+			<p class="text-xs text-gray-800 line-clamp-3">
 				{description}
 			</p>
 			<div class="flex gap-1.5 mt-auto flex-wrap">
