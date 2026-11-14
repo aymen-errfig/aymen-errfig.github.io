@@ -21,19 +21,25 @@ const projects = await getCollection("projects");
                     work.
                 </p>
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
                 {
-                    projects.map((project) => (
-                        <div class="bg-white card min-h-80 flex items-end relative">
-                            <div class="absolute inset-0 backdrop-brightness-70 bg-black/10 hover:bg-transparent hover:backdrop-brightness-100 transition duration-300" />
+                    projects.map((project, index) => (
+                        <a
+                            href={`/projects/${project.data.id}`}
+                            aria-label={`View details for ${project.data.title}`}
+                            class="bg-white card min-h-80 flex items-end relative group overflow-hidden"
+                        >
+                            <div class="absolute inset-0 backdrop-brightness-70 bg-black/10 group-hover:bg-transparent group-hover:backdrop-brightness-100 transition duration-300" />
                             <Image
                                 src={images[project.data.imageUrl]()}
                                 alt={project.data.title}
                                 class={
                                     "object-cover w-full h-full shadow-2xl transition-all duration-300"
                                 }
+                                fetchpriority={index < 2 ? "high" : "auto"}
+                                loading={index < 2 ? "eager" : "lazy"}
                             />
-                            <div class="flex flex-col gap-2 absolute mb-4 ml-4">
+                            <div class="flex flex-col gap-2 absolute mb-4 ml-4 group-hover:translate-y-10 translate-y-0 transition duration-300">
                                 <h3 class="text-xl font-bold text-white">
                                     {project.data.title}
                                 </h3>
@@ -48,7 +54,7 @@ const projects = await getCollection("projects");
                             <div class="flex gap-2 justify-center">
                                 <div />
                             </div>
-                        </div>
+                        </a>
                     ))
                 }
             </div>
