@@ -7,19 +7,32 @@ import SkillsSection from "../components/skills-section.astro";
 import ProjectSection from "../components/project-section.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const traits = [
+	"Creative",
+	"Innovative",
+	"Passionate",
+	"Curious",
+	"Adaptable",
+	"Collaborative",
+	"Resourceful",
+	"Empathetic",
+	"Resilient",
+	"Visionary",
+];
 ---
 
 <Layout>
 	<main class="w-full flex flex-col items-center scroll-smooth">
 		<Header />
 		<ProfileSection />
-		<div class="bg-primary text-white w-full p-8 flex gap-4 overflow-hidden">
-			<p class="label text-white">SKILLS</p>
-			<p class="label text-white">SKILLS</p>
-			<p class="label text-white">SKILLS</p>
-			<p class="label text-white">SKILLS</p>
-			<p class="label text-white">SKILLS</p>
-			<p class="label text-white">SKILLS</p>
+		<div class="item-conveyor bg-primary p-8">
+			<div class="track">
+				{
+					Array.from({ length: 40 }, (_, i) => (
+						<p class="label text-white uppercase">{`${traits[i % traits.length]}`}</p>
+					))
+				}
+			</div>
 		</div>
 		<SkillsSection />
 		<ProjectSection />

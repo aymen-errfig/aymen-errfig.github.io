@@ -42,6 +42,10 @@
         font-family: var(--font-heading);
     }
 
+    .font-heading {
+        font-family: var(--font-heading);
+    }
+
     h3,
     h4 {
         font-family: var(--font-label);
@@ -145,4 +149,34 @@
         border: 1px solid #000000;
         z-index: 0;
     }
+
+    .item-conveyor {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .track {
+        display: flex;
+        width: max-content;
+        gap: 16px;
+        animation: scrollItems 24s linear infinite;
+    }
+
+    /* Optional: Pause belt on hover */
+    .item-conveyor:hover .track {
+        transition: 1s ease;
+        animation-duration: 0.5s;
+        animation-play-state: paused;
+    }
+
+    @keyframes scrollItems {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
 }
