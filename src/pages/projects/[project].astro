@@ -51,13 +51,25 @@ const project_image = images[projectData.data.imageUrl]();
                 >
             </div>
             <div class="gap-3">
-                <Image
-                    src={project_image}
-                    alt=""
-                    class={"object-cover w-full h-full"}
-                    loading={"eager"}
-                    fetchpriority="high"
-                />
+                {
+                    projectData.data.videoUrl ? (
+                        <iframe
+                            src={projectData.data.videoUrl}
+                            style="width: 100%; border: none; aspect-ratio: 16/8;"
+                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                            title={`${projectData.data.title} Video`}
+                            allowfullscreen
+                        />
+                    ) : (
+                        <Image
+                            src={project_image}
+                            alt=""
+                            class={"object-cover w-full h-full"}
+                            loading={"eager"}
+                            fetchpriority="high"
+                        />
+                    )
+                }
             </div>
             <div class="grid grid-cols-2 gap-3 mt-4 max-md:grid-cols-1">
                 <div
