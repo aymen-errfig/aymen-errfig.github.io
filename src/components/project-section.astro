@@ -7,15 +7,28 @@ const projects = await getCollection("projects");
 
 <section id="projects" class="bg-secondary py-12 h-auto flex justify-center">
     <div class="flex flex-col gap-8 w-[80%]">
-        <div class="flex flex-col gap-1 justify-center items-start">
-            <h4 class="label uppercase">Selected Projects</h4>
-            <h2 class="uppercase text-2xl text-text">Projects and Work</h2>
+        <div class="flex w-full justify-between">
+            <div class="flex flex-col gap-1 justify-center items-start">
+                <h2 class="label uppercase">Selected Projects</h2>
+                <h4 class="text-3xl text-text font-heading">
+                    Projects and Work
+                </h4>
+            </div>
+            <div>
+                <a
+                    href="/projects"
+                    class="text-sm font-medium hover:text-gray-700 transition-all duration-300"
+                >
+                    View All Projects <span class="mr-2">→</span>
+                </a>
+            </div>
         </div>
+
         <div
             class="flex gap-4 overflow-x-scroll scrollbar-thumb-transparent scrollbar-track-transparent scrollbar-thin pb-4"
         >
             {
-                projects.map((project) => (  
+                projects.map((project) => (
                     <Project
                         key={project.data.title}
                         id={project.data.id}
