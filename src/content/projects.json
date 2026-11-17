@@ -2,7 +2,7 @@
     {
         "id": "project-1",
         "title": "Transcendence & Kick off",
-        "description": "This is a project when you can play, chat, and connect with others.",
+        "description": "This is a project when you can play, chat, and connect with others while enjoying a great experience and building meaningful connections.",
         "tags": [
             "TypeScript",
             "React/Next.js",
@@ -10,6 +10,7 @@
             "NestJS",
             "PostgreSQL"
         ],
+        "videoUrl": "https://player.mux.com/rMO8DeFU4028M8jk7Zb00wOW1eM013QgoyRUaxfpKgPFoI",
         "imageUrl": "/src/assets/img/ft_transcendence/cover.png",
         "isNew": true
     },
