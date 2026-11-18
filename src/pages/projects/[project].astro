@@ -64,16 +64,18 @@ const project_image = images[projectData.data.imageUrl]();
                         <Image
                             src={project_image}
                             alt=""
-                            class={"object-cover w-full h-full"}
+                            class={"object-cover w-full h-full border"}
                             loading={"eager"}
                             fetchpriority="high"
                         />
                     )
                 }
             </div>
-            <div class="grid grid-cols-2 gap-3 mt-4 max-md:grid-cols-1">
+            <div
+                class="grid grid-cols-2 gap-3 mt-4 max-md:grid-cols-1 place-items-start"
+            >
                 <div
-                    class="flex flex-col gap-2 mt-4 justify-between border-l-4 border-accent p-4 py-2"
+                    class="flex flex-col gap-2 justify-between border-l-4 border-accent p-4 py-2"
                 >
                     <h3 class="font-bold uppercase">Description</h3>
                     <p class="text-xs text-gray-800">
@@ -81,12 +83,12 @@ const project_image = images[projectData.data.imageUrl]();
                     </p>
                 </div>
                 <div
-                    class="flex flex-col gap-2 justify-between border-l-4 border-blue-600 p-4 py-2"
+                    class="flex flex-col gap-4 border-l-4 border-blue-600 p-4 py-2"
                 >
                     <h3 class="flex gap-1 items-center font-bold uppercase">
                         <Icon name={"technologies"} color="#000000" /> Technologies
                     </h3>
-                    <div class="flex gap-1.5 mt-auto flex-wrap">
+                    <div class="flex gap-1.5 flex-wrap">
                         {
                             projectData.data.tags.map((tag) => (
                                 <span class="bg-gray-300 text-text p-2 text-xs border spacegrotesk uppercase">
