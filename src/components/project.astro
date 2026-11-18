@@ -47,11 +47,20 @@ const image = images[imageUrl]();
 			</p>
 			<div class="flex gap-1.5 mt-auto flex-wrap">
 				{
-					tags.map((tag) => (
+					tags
+						.slice(0, 3)
+						.map((tag) => (
+							<span class="bg-gray-300 text-text p-2 text-2xs border spacegrotesk uppercase">
+								{tag}
+							</span>
+						))
+				}
+				{
+					tags.length > 3 && (
 						<span class="bg-gray-300 text-text p-2 text-2xs border spacegrotesk uppercase">
-							{tag}
+							{tags.length > 3 ? `+${tags.length - 3} more` : ""}
 						</span>
-					))
+					)
 				}
 			</div>
 		</div>
