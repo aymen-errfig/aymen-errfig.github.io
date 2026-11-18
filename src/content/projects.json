@@ -16,35 +16,44 @@
     },
     {
         "id": "project-2",
-        "title": "Project 2",
-        "description": "This is another sample project.",
+        "title": "Rakayib - mobile marketplace",
+        "description": "A mobile marketplace connecting buyers and sellers of horses and camels. Discover auctions, explore animal details, place bids, and follow every order through to delivery.",
         "tags": [
-            "JavaScript",
-            "Vue"
+            "Flutter/Dart",
+            "Provider",
+            "Laravel",
+            "MySQL",
+            "REST API"
         ],
-        "imageUrl": "/src/assets/img/ft_transcendence/cover.png",
-        "isNew": false
-    },
-    {
-        "id": "project-3",
-        "title": "Project 3",
-        "description": "This is yet another sample project.",
-        "tags": [
-            "Python",
-            "Django"
-        ],
-        "imageUrl": "/src/assets/img/ft_transcendence/cover.png",
+        "imageUrl": "/src/assets/img/rakayib/cover.png",
         "isNew": true
     },
     {
-        "id": "project-4",
-        "title": "Project 4",
-        "description": "This is a fourth sample project.",
+        "id": "project-3",
+        "title": "13 BUS - Mobile Booking",
+        "description": "13 BUS is a mobile bus-booking concept designed to simplify everyday travel. Users can choose a pickup location, browse trips, check seat availability and departure times, and access a QR travel pass with their journey details—all within a clear, blue-toned interface.",
         "tags": [
-            "Java",
-            "Spring"
+            "Flutter/Dart",
+            "Provider",
+            "Express.js",
+            "PostgreSQL"
         ],
-        "imageUrl": "/src/assets/img/ft_transcendence/cover.png",
+        "imageUrl": "/src/assets/img/13_bus/cover.png",
+        "isNew": false
+    },
+    {
+        "id": "project-4",
+        "title": "Skills Center - Booking Platform",
+        "description": "Skills Center is a web platform designed to simplify discovering and reserving sports facilities. Users can explore fields and courts for football, basketball, tennis, and volleyball, view facility details and opening hours, and book a space for their preferred date and time.",
+        "tags": [
+            "JavaScript",
+            "React/Next.js",
+            "Tailwind CSS",
+            "Shadcn UI",
+            "Express.js",
+            "PostgreSQL"
+        ],
+        "imageUrl": "/src/assets/img/skills_center/cover.png",
         "isNew": false
     }
 ]
